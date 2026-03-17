@@ -6,7 +6,7 @@
 body {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;  
   justify-items: center;
   font-family: "Palanquin", sans-serif;
   font-size: 18px;
@@ -29,19 +29,12 @@ body {
 }
 
 header {
-  max-width: 1440px;
   width: 100%;
-  height: 508px;
-  background-image: url(assets/img/9368f6ab61c8df3bac59f014cab9c6aa8df459ec.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  object-fit: cover;
+  height: 128px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 0;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
 }
@@ -49,11 +42,8 @@ header {
 nav {
   height: 128px;
   max-width: 1440px;
-  margin: 0 auto;
-  position: absolute;
-  top: 0px;
-  left: 0;
-  right: 0;
+  width: 100%;
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -104,89 +94,27 @@ nav img {
   transform: translate(0, -11px) rotate(45deg);
 }
 
-.hero {
-  position: relative;
-  margin-top: 120px;
-  margin-bottom: 90px;
+main {
+  flex: 1;
+  max-width: 1240px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  
 }
 
-.logo-img {
-  display: flex;
-  justify-content: center;
-  align-self: center;
-  margin: 0;
-  position: absolute;
-  top: -240px;
-  img {
-    width: 200px;
-    height: auto;
-    border-radius: 50%;
-    border: 13px solid #fdeadc;
-    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.4);
-  }
-}
-.headline {
-  display: flex;
-  gap: 25px;
-  justify-content: center;
-  align-items: center;
+h1{
+    margin-left: 25px;
 }
 
-.subline {
-  font-family: "Palanquin", sans-serif;
-  font-weight: 700;
-}
-
-h1 {
-  color: #e76c1f;
-  font-weight: 700;
-  font-size: 48px;
+h2{
+    margin-left: 25px;
 }
 
 span {
-  color: black;
+  font-weight: 700;
 }
-main {
-  width: 100%;
-  max-width: 1440px;
-  gap: 2px;
-  padding: 2px;
-  display: flex;
-  flex-direction: row;
-  flex-grow: 1;
-  background-color: black;
-  box-sizing: border-box;
-  margin: 0;
-}
-
-.content {
-  width: calc(100% - 300px);
-  flex-grow: 1;
-  padding: 16px;
-  border: 2px solid white;
-  background-color: blue;
-  box-sizing: border-box;
-  margin: 0;
-}
-.basket_wrapper {
-  width: 300px;
-  flex-grow: 1;
-  border: 2px solid white;
-  padding: 16px;
-  box-sizing: border-box;
-  margin: 0;
-}
-
-.basket {
-  width: 100%;
-  height: 400px;
-  position: sticky;
-  top: 0;
-  background-color: blue;
+p{
+    padding: 0 25px;
 }
 
 footer {
@@ -205,8 +133,9 @@ footer {
   border-bottom-left-radius: 25px;
 }
 
-a {
+footer a {
   cursor: pointer;
   text-decoration: none;
   color: white;
+  
 }
