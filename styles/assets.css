@@ -2,4 +2,13 @@
     border-radius: 20px;
     width: 115px;
     height: 30px;
+    font-size: 16px;
+}
+
+#addedButton{
+    border-radius: 20px;
+    width: 115px;
+    height: 30px;
+    color: #E76C1F;
+    font-size: 16px;
 }
