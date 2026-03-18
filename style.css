@@ -212,7 +212,7 @@ main {
     margin-top: 31px;
 }
 
-#menu{
+.menu-container{
     max-width: 1240px;
     width: 100%;
     display: flex;
