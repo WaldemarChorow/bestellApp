@@ -38,14 +38,14 @@ function getBasketItemTemplate(i) {
         <div class="basket-item">
             <div class="basket-item-content">
                 <b>${name}</b>
-                <button class="btn-delete" onclick=""><img src="assets/img/delete.svg" alt="garbage container"></button>                
+                <button class="btn-delete" onclick="deleteAmount(${i})"></button>                
             </div>
             <div class="basket-item-controls">
-                <div class="basket-item-controls-crowd"
+                <div class="basket-item-controls-crowd">
                     <button class="btn-decrease" onclick="decreaseAmount(${i})">-</button>
                     <span class="item-amount">${amount}</span>
                     <button class="btn-increase" onclick="increaseAmount(${i})">+</button>
-                <div>
+                </div>
                 <span>${itemTotalPrice}€</span>
             </div>
         </div>

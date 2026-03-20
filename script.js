@@ -46,5 +46,25 @@ function renderBasket() {
         }
     }
 
-    calculateTotals(); 
+    calculateTotals();     
+}
+
+function checkout() {
+    // 1. Warenkorb-Daten leeren
+    basketNames = [];
+    basketPrices = [];
+    basketAmounts = [];
+
+    // 2. UI updaten (Warenkorb ist jetzt leer)
+    renderBasket();
+    render(); 
+
+    // 3. Dialog einblenden
+    let overlay = document.getElementById('order-confirmation-overlay');
+    overlay.classList.remove('hidden');
+}
+
+function closeDialog() {
+    let overlay = document.getElementById('order-confirmation-overlay');
+    overlay.classList.add('hidden');
 }

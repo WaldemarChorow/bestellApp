@@ -1,7 +1,3 @@
-@font-face {
-  font-family: "Palanquin", sans-serif;
-  src: url(assets/fonts/Palanquin/Palanquin-Regular.ttf);
-}
 
 body {
   display: flex;

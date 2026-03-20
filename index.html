@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="styles/basket.css" />
     <link rel="stylesheet" href="styles/fonts.css" />
     <link rel="stylesheet" href="styles/standard.css" />
+    <link rel="stylesheet" href="styles/dialog-order.css">
   </head>
 
   <body onload="render()">
@@ -115,7 +116,7 @@
                     <td id="total" class="align-right">4,99€</td>
                     </tr>
                 </table>
-                <button class="checkout-btn">Buy now</button>
+                <button id="checkout-btn" class="checkout-btn" onclick="checkout()">Buy now</button>
             </div>
         </section>
       </main>
@@ -125,6 +126,18 @@
         <a href="">Imprint</a>
         <a href="">Cookie Preferences</a>
       </footer>
+    </section>
+    <section id="order-confirmation-overlay" class="dialog-overlay hidden">
+        <div class="dialog-box">
+            <div class="dialog-box-close-section">
+                <button class="btn-close-dialog" onclick="closeDialog()">×</button>    
+            </div>
+            <span class="dialog-icon"><img src="assets/img/deliverCar.svg" alt="a pisture of a deliver car"></span> 
+            <div class="dialog-box-content">
+                <h3>Order confirmed!</h3>                            
+                <p>Your food is on the way!</p>
+            </div>               
+        </div>
     </section>
   </body>
 </html>
