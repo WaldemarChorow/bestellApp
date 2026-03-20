@@ -8,6 +8,7 @@
     <script src="script.js"></script>
     <script src="scripts/db.js"></script>
     <script src="scripts/template.js"></script>
+    <script src="scripts/basket.js"></script>
 
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="styles/assets.css" />
@@ -16,7 +17,7 @@
     <link rel="stylesheet" href="styles/standard.css" />
   </head>
 
-  <body>
+  <body onload="render()">
     <section class="myBody-wrapper">
       <header>
         <nav>
@@ -49,73 +50,73 @@
       </section>
       <main class="content_wrapper">
         <section class="content">
-            <div class="menu-sections">
-                <div class="headlineBurger">
-                    <div class="head">
-                        <img src="assets/img/Chanese 1.svg" alt="a drowing picture from a Burger">
-                        <h2>Burger & Sandwiches</h2> 
-                    </div>               
-                </div>
-                <div id="burger-menu" class="menu-container">
-                    <div class="court">
-                        <img src="assets/img/burgerIMGs/vaggie.svg" alt="a foto from vaggie burger">
-                        <div class="court-description">
-                            <h3>Vaggie mushrooms black burger</h3>
-                            <p>Mixed green salad, Tomateos, Edamame, Muschrooms</p>
-                        </div>
-                        <div class="price-section">
-                            <h3>16,90€</h3>
-                            <button id="addButton" onclick="">Add to basket</button>
-                        </div>
-                    </div>
-                </div>
+          <div class="menu-sections">
+            <div class="headlineBurger">
+              <div class="head">
+                <img
+                  src="assets/img/Chanese 1.svg"
+                  alt="a drowing picture from a Burger"
+                />
+                <h2>Burger & Sandwiches</h2>
+              </div>
             </div>
-            <div class="menu-sections">
-                <div class="headlinePizza">
-                    <div class="head">
-                        <img src="assets/img/Pizza 1.png" alt="a drowing picture from a Burger">
-                        <h2>Pizza (30cm)</h2> 
-                    </div>               
-                </div>
-                <div id="pizza-menu" class="menu-container">
-                    <div class="court">
-                        <img src="assets/img/burgerIMGs/vaggie.svg" alt="a foto from vaggie burger">
-                        <div class="court-description">
-                            <h3>Vaggie mushrooms black burger</h3>
-                            <p>Mixed green salad, Tomateos, Edamame, Muschrooms</p>
-                        </div>
-                        <div class="price-section">
-                            <h3>16,90€</h3>
-                            <button id="addButton" onclick="">Add to basket</button>
-                        </div>
-                    </div>
-                </div>
+            <div id="burger-menu" class="menu-container"></div>
+          </div>
+          <div class="menu-sections">
+            <div class="headlinePizza">
+              <div class="head">
+                <img
+                  src="assets/img/Pizza 1.png"
+                  alt="a drowing picture from a Burger"
+                />
+                <h2>Pizza (30cm)</h2>
+              </div>
             </div>
-            <div class="menu-sections">
-                <div class="headlineSalads">
-                    <div class="head">
-                        <img src="assets/img/Salad 1.svg" alt="a drowing picture from a Burger">
-                        <h2>Salad</h2> 
-                    </div>               
-                </div>
-                <div id="salad-menu" class="menu-container">
-                    <div class="court">
-                        <img src="assets/img/burgerIMGs/beef.svg" alt="a foto from vaggie burger">
-                        <div class="court-descriptionAdded">
-                            <h3>Vaggie mushrooms black burger</h3>
-                            <p>Mixed green salad, Tomateos, Edamame, Muschrooms</p>
-                        </div>
-                        <div class="price-section">
-                            <h3>16,90€</h3>
-                            <button id="addedButton" onclick="">Added 1</button>
-                        </div>
-                    </div>
-                </div>
+            <div id="pizza-menu" class="menu-container"></div>
+          </div>
+          <div class="menu-sections">
+            <div class="headlineSalads">
+              <div class="head">
+                <img
+                  src="assets/img/Salad 1.svg"
+                  alt="a drowing picture from a Burger"
+                />
+                <h2>Salad</h2>
+              </div>
             </div>
-        
+            <div id="salad-menu" class="menu-container"></div>
+          </div>
         </section>
         <section class="basket_wrapper">
-          <div class="basket"></div>
+          <div class="basket">
+            <h4>Your Basket</h4>
+
+            <div id="basket-empty" class="basket-empty-state">
+              <p>
+                Nothing here yet. <br />Go ahead and choose something delicious!
+              </p>
+              <img src="assets/img/basket.svg" alt="Empty Basket" />
+            </div>
+
+            <div id="basket-items" class="basket-items-list hidden"></div>
+
+            <div id="basket-summary" class="basket-summary hidden">
+                <table class="summary-table">
+                    <tr>
+                    <td>Subtotal</td>
+                    <td id="subtotal" class="align-right">0,00€</td>
+                    </tr>
+                    <tr>
+                    <td class="spacing-bottom">Delivery fee</td>
+                    <td class="align-right spacing-bottom">4,99€</td>
+                    </tr>
+                    <tr class="total-row">
+                    <td>Total</td>
+                    <td id="total" class="align-right">4,99€</td>
+                    </tr>
+                </table>
+                <button class="checkout-btn">Buy now</button>
+            </div>
         </section>
       </main>
       <footer>

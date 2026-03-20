@@ -13,19 +13,19 @@ body {
   margin: 0;
 }
 
-.myBody-wrapper{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 1440px;
-    width: 100%;
-    box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.6);
-    border: #ffffff;
-    margin: 0;
-    border-bottom-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
+.myBody-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1440px;
+  width: 100%;
+  box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.6);
+  border: #ffffff;
+  margin: 0;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
 }
 
 header {
@@ -111,7 +111,6 @@ nav img {
   display: flex;
   flex-direction: column;
   gap: 25px;
-  
 }
 
 .logo-img {
@@ -136,21 +135,20 @@ nav img {
   align-items: center;
 }
 
-
 main {
   width: 100%;
   max-width: 1440px;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: space-between; 
   flex-grow: 1;
   box-sizing: border-box;
   margin: 0;
 }
 
 .content {
-  width: calc(100% - 300px);
+  width: calc(100% - 445px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -158,133 +156,118 @@ main {
   box-sizing: border-box;
   margin: 0;
 }
-.menu-sections{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;    
-}
-.headlineBurger{
-    background-color: #e76c1f;
-    width: 100%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 31px;
-}
-
-.head{
-    max-width: 950px;
-    width: 100%;
-    margin: 0;
-    padding: 0%;
-    color: #ffffff;
-    display: flex;
-    align-items: center;   
-}
-
-.head img{
-    width: 88px;
-    height: 91px;
-    position: absolute;
-    padding-bottom: 23px;
-    padding-left: 25px;
-}
-
-.headlinePizza{
-    background-color: #e76c1f;
-    width: 100%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 31px;
-}
-
-.headlineSalads{
-    background-color: #e76c1f;
-    width: 100%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 31px;
-}
-
-.menu-container{
-    max-width: 1240px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    justify-content: flex-start;
-    flex-grow: 1;
-}
-
-.court{
-    background-color: #FDEADC;
-    max-width: 712px;
-    width: 100%;
-    height: 141px;
-    display: flex;
-    align-items: center;
-    padding: 10px 10px;
-    margin-top: 25px;
-    border-radius: 12px;
-    gap: 15px;
-    margin: 15px 25px;
-
-}
-
-.court img{
-    width: 207px;
-    height: 121px;
-}
-
-.court-description{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding-top: 20px;
-}
-
-.court-descriptionAdded{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding-top: 20px;
-    padding-left: 50px;
-}
-
-.price-section{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-end;
-    gap: 25px;
-}
-
-
-/* .basket_wrapper {
-  width: 300px;
-  flex-grow: 1;
-  box-sizing: border-box;
-  margin: 0;
-}
-
-.basket {
+.menu-sections {
   width: 100%;
-  height: 400px;
-  position: sticky;
-  top: 0;
-  background-color: blue;
-} */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.headlineBurger {
+  background-color: #e76c1f;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 31px;
+}
+
+.head {
+  max-width: 950px;
+  width: 100%;
+  margin: 0;
+  padding: 0%;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.head img {
+  width: 88px;
+  height: 91px;
+  position: absolute;
+  padding-bottom: 23px;
+  padding-left: 25px;
+}
+
+.headlinePizza {
+  background-color: #e76c1f;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 31px;
+}
+
+.headlineSalads {
+  background-color: #e76c1f;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 31px;
+}
+
+.menu-container {
+  max-width: 1240px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: flex-start;
+  flex-grow: 1;
+}
+
+.court {
+  background-color: #fdeadc;
+  max-width: 712px;
+  width: 100%;
+  height: 141px;
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+  margin-top: 25px;
+  border-radius: 12px;
+  gap: 15px;
+  margin: 15px 25px;
+}
+
+.court img {
+  width: 207px;
+  height: 121px;
+}
+
+.court-description {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-grow: 1;
+  padding-top: 20px;
+}
+
+.court-descriptionAdded {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-grow: 1;
+  padding-top: 20px;
+  padding-left: 50px;
+}
+
+.price-section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  gap: 25px;
+}
 
 footer {
   max-width: 1440px;
@@ -307,3 +290,26 @@ a {
   text-decoration: none;
   color: white;
 }
+
+/* Für den organgen Streifen auf content und hinter dem basket-wrapper */
+.headlineBurger,
+.headlinePizza,
+.headlineSalads {
+  position: relative;
+}
+
+.headlineBurger::after,
+.headlinePizza::after,
+.headlineSalads::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 435px;
+  height: 100%;
+  background-color: #e76c1f;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+}
+/* ------------------------------------------------------------------ */

@@ -1,0 +1,170 @@
+.basket_wrapper {
+  width: 435px;
+  position: sticky;
+  top: 20px;
+  align-self: flex-start;
+  box-sizing: border-box;
+  margin-top: 30px;
+  z-index: 10;
+}
+/* Warenkorb */
+.basket {
+  width: 100%;
+  height: 794px;
+  background-color: #363534;
+  color: white;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  padding: 25px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Der leere Zustand */
+.basket-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #cccccc;
+}
+
+.basket h4 {
+  font-size: 32px;
+  font-family: "Palanquin", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+  padding-bottom: 41px;
+  padding-top: 50px;
+}
+
+.basket-empty-state img {
+  width: 128px;
+  height: 129px;
+  padding-top: 60px;
+}
+
+/* Die scrollbare Liste für die Gerichte */
+.basket-items-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Eine einzelne Gericht-Karte im Korb */
+.basket-item {
+  max-width: 340px;
+  width: 100%;
+  background-color: #fdeadc;
+  color: #333333;
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.basket-item-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-delete{
+    border: none;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+.basket-item-controls{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.basket-item-controls-crowd{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+}
+
+.btn-decrease{
+    border: none;
+    font-size: 24px;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+.btn-increase{
+    border: none;
+    font-size: 24px;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+/* Summen und Kasse */
+.basket-summary {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  gap: 5px;
+}
+
+.summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+
+.summary-table td {
+  padding: 5px 0;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.spacing-bottom {
+  padding-bottom: 15px !important;
+}
+
+.total-row td {
+  border-top: 2px solid white;
+  padding-top: 15px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.checkout-btn {
+  background-color: #e76c1f;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  width: 100%;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+#basket-empty.hidden,
+#basket-items.hidden,
+#basket-summary.hidden {
+  display: none;
+}
+

@@ -63,6 +63,16 @@ h3 {
   font-size: 24px;
 }
 
+.basket h4 {
+  font-size: 32px;
+  font-family: "Palanquin", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+  padding-bottom: 41px;
+  padding-top: 50px;
+}
+
 .subline {
   font-family: "Palanquin", sans-serif;
   font-weight: 700;

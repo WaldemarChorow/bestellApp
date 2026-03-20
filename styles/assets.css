@@ -1,14 +1,37 @@
-#addButton{
+
+/* Button styling  */
+.addButton{
     border-radius: 20px;
     width: 115px;
     height: 30px;
     font-size: 16px;
 }
 
-#addedButton{
+/* Button syling bei hinzugefügten Gericht */
+.addedButton{
     border-radius: 20px;
     width: 115px;
     height: 30px;
     color: #E76C1F;
     font-size: 16px;
+}
+
+/* Styling der Scrollbar für den Warenkorb */
+.basket-items-list::-webkit-scrollbar {
+  width: 6px;
+  height: 60px;
+}
+
+.basket-items-list::-webkit-scrollbar-track {
+  background: #363534;
+  border-radius: 30px;
+}
+
+.basket-items-list::-webkit-scrollbar-thumb {
+  background: #e76c1f;
+  border-radius: 10px;
+}
+
+.basket-items-list::-webkit-scrollbar-thumb:hover {
+  background: #c95b17;
 }
