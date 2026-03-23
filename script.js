@@ -50,18 +50,16 @@ function renderBasket() {
 }
 
 function checkout() {
-    // 1. Warenkorb-Daten leeren
     basketNames = [];
     basketPrices = [];
     basketAmounts = [];
-
-    // 2. UI updaten (Warenkorb ist jetzt leer)
     renderBasket();
     render(); 
 
-    // 3. Dialog einblenden
+    
     let overlay = document.getElementById('order-confirmation-overlay');
     overlay.classList.remove('hidden');
+    document.querySelector('.basket_wrapper').classList.remove('show-mobile');
 }
 
 function closeDialog() {

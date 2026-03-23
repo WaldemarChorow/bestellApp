@@ -128,10 +128,11 @@
   box-shadow: 0px 8px 15px rgba(231, 108, 31, 0.4);
 }
 
-.btn-close-dialog {
-  width: 25px;
-  height: 25px;
-  font-size: 25px;
+.btn-close-dialog, 
+.mobile-only{
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
   background-color: transparent;
   margin: 0;
   border: none;
@@ -143,10 +144,10 @@
   transition: all 0.2s ease-in-out;
 }
 
-.btn-close-dialog:hover {
+.btn-close-dialog:hover,
+.btn-close-basket:hover, 
+.mobile-only:hover {
   color: #c95b17;
   background-color: white;
   box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.4);
-  transform: translateY(-3px);
-  transition: all 0.4s ease-in-out;
 }

@@ -62,3 +62,12 @@ function deleteAmount(i){
     renderBasket();
     render();
 }
+
+function openMobileBasket(event) {
+    event.preventDefault(); 
+    document.querySelector('.basket_wrapper').classList.add('show-mobile');
+}
+
+function closeMobileBasket() {
+    document.querySelector('.basket_wrapper').classList.remove('show-mobile');
+}

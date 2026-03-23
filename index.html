@@ -31,8 +31,10 @@
             </div>
           </div>
         </nav>
-      </header>
-      <section class="hero">
+        <div class="header-image">
+          <img src="assets/img/9368f6ab61c8df3bac59f014cab9c6aa8df459ec.jpg" alt="">
+        </div>
+         <section class="hero">
         <div class="logo-img">
           <img
             src="assets/img/5045650232394c82bc6d0c922b2ea0aaace7e71d.png"
@@ -49,6 +51,9 @@
           </p>
         </div>
       </section>
+        
+      </header>
+     
       <main class="content_wrapper">
         <section class="content">
           <div class="menu-sections">
@@ -70,7 +75,7 @@
                   src="assets/img/Pizza 1.png"
                   alt="a drowing picture from a Burger"
                 />
-                <h2>Pizza (30cm)</h2>
+                <h2>Pizza <i><small>(30cm)</small></i></h2>
               </div>
             </div>
             <div id="pizza-menu" class="menu-container"></div>
@@ -90,6 +95,7 @@
         </section>
         <section class="basket_wrapper">
           <div class="basket">
+            <button class="btn-close-basket mobile-only" onclick="closeMobileBasket()">×</button>
             <h4>Your Basket</h4>
 
             <div id="basket-empty" class="basket-empty-state">
@@ -126,7 +132,15 @@
         <a href="">Imprint</a>
         <a href="">Cookie Preferences</a>
       </footer>
-    </section>
+      <section id="basket-mobile" class="basket-mobile">
+        <button id="btn-mobile-home" class="btn-mobile-icon" onclick="window.location.href='index.html'"></button>
+        <button id="btn-mobile-profile" class="btn-mobile-icon" onclick="event.preventDefault()"></button>
+        <button id="btn-mobile-orders" class="btn-mobile-icon" onclick="event.preventDefault()"></button>
+        <button id="btn-mobile-basket" class="btn-mobile-icon" onclick="openMobileBasket(event)"></button>
+      </section>
+    
+  </section>
+  
     <section id="order-confirmation-overlay" class="dialog-overlay hidden">
         <div class="dialog-box">
             <div class="dialog-box-close-section">

@@ -1,5 +1,8 @@
 .basket_wrapper {
-  width: 435px;
+  width: 32%;
+  max-width: 435px;
+  min-width: 180ox;
+  width: 100%;
   position: sticky;
   top: 20px;
   align-self: flex-start;
@@ -9,6 +12,7 @@
 }
 /* Warenkorb */
 .basket {
+  max-width: 435px;
   width: 100%;
   height: 794px;
   background-color: #363534;
@@ -24,7 +28,7 @@
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Der leere Zustand */
+/* Empty basket */
 .basket-empty-state {
   display: flex;
   flex-direction: column;
@@ -135,4 +139,114 @@
 #basket-items.hidden,
 #basket-summary.hidden {
   display: none;
+}
+
+.mobile-only{
+  display: none;
+}
+
+@media (max-width: 980px) {
+  
+  .basket-mobile  {
+  display: block;
+  width: 100%;
+  height: 78px;
+  background-color: #363534;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+}
+
+.btn-mobile-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .basket-mobile .btn-mobile-icon:hover,
+  .basket-mobile .btn-mobile-icon:active {
+    background-color: #ffffff;
+  }
+
+  #btn-mobile-home {
+    background-image: url('/assets/icons/home.svg');
+  }
+  #btn-mobile-profile {
+    background-image: url('/assets/icons/Profile.svg');
+  }
+  #btn-mobile-orders {
+    background-image: url('/assets/icons/orders.svg');
+  }
+  #btn-mobile-basket {
+    background-image: url('/assets/icons/shopping.svg');
+  }
+
+  #btn-mobile-home:hover, #btn-mobile-home:active {
+    background-image: url('/assets/icons/home-hover.svg');
+  }
+
+  #btn-mobile-profile:hover, #btn-mobile-profile:active {
+    background-image: url('/assets/icons/person.svg');
+  }
+
+  #btn-mobile-orders:hover, #btn-mobile-orders:active {
+    background-image: url('/assets/icons/takeout_dining_2.svg');
+  }
+
+  #btn-mobile-basket:hover, #btn-mobile-basket:active {
+    background-image: url('/assets/icons/shopping_cart.svg');
+  }
+
+  .mobile-only {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 2001; 
+  }
+
+  .basket_wrapper.show-mobile {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    max-width: 100%;
+    margin: 0;
+    z-index: 2000;
+  }
+
+  .basket_wrapper.show-mobile .basket {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    border-radius: 0;
+    padding-top: 50px;
+    position: relative;
+  }
+
+  .basket-items-list {
+    overflow-y: auto;
+    padding-bottom: 20px;
+  }
 }

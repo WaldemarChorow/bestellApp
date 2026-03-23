@@ -1,4 +1,3 @@
-
 body {
   display: flex;
   flex-direction: column;
@@ -18,45 +17,39 @@ body {
   box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.6);
   border: #ffffff;
   margin: 0;
-  border-bottom-right-radius: 25px;
-  border-bottom-left-radius: 25px;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
 }
 
 header {
   max-width: 1440px;
   width: 100%;
-  height: 508px;
-  background-image: url(assets/img/9368f6ab61c8df3bac59f014cab9c6aa8df459ec.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  object-fit: cover;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin: 0;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+}
+
+.header-image {
+  width: 100%;
+  height: auto;
+}
+.header-image img {
+  width: 100%;
+  height: 750px;
+  object-fit: cover;
 }
 
 nav {
   height: 128px;
   max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
-  position: absolute;
-  top: 0px;
-  left: 0;
-  right: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #e76c1f;
   box-shadow: 2px 6px 6px rgba(0, 0, 0, 0.4);
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
 }
 
 nav img {
@@ -66,11 +59,13 @@ nav img {
 
 .nav-bar {
   max-width: 1240px;
+  margin: 0% auto;
+  padding: 0 25px;
   width: 100%;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 25px;
 }
 
 .menu {
@@ -137,14 +132,14 @@ main {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: space-between; 
+  justify-content: space-between;
   flex-grow: 1;
   box-sizing: border-box;
   margin: 0;
 }
 
 .content {
-  width: calc(100% - 445px);
+  width: 65%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -164,18 +159,22 @@ main {
   height: 60px;
   display: flex;
   align-items: center;
-  justify-content: center;
   margin-top: 31px;
+  padding-left: 100px;
+  box-sizing: border-box;
 }
 
 .head {
-  max-width: 950px;
+  max-width: 1240px;
   width: 100%;
-  margin: 0;
-  padding: 0%;
+  margin: 0 auto;
+  padding: 0 25px;
   color: #ffffff;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
+  padding-left: 40px;
+  position: relative;
 }
 
 .head img {
@@ -183,7 +182,6 @@ main {
   height: 91px;
   position: absolute;
   padding-bottom: 23px;
-  padding-left: 25px;
 }
 
 .headlinePizza {
@@ -194,6 +192,8 @@ main {
   align-items: center;
   justify-content: center;
   margin-top: 31px;
+  padding-left: 100px;
+  box-sizing: border-box;
 }
 
 .headlineSalads {
@@ -204,35 +204,41 @@ main {
   align-items: center;
   justify-content: center;
   margin-top: 31px;
+  padding-left: 100px;
+  box-sizing: border-box;
 }
 
 .menu-container {
-  max-width: 1240px;
+  max-width: 750px;
   width: 100%;
+  margin: 0 auto;
+  padding: 0 25px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  justify-content: flex-start;
-  flex-grow: 1;
+  align-items: flex-start;
 }
 
 .court {
   background-color: #fdeadc;
   max-width: 712px;
+  min-width: 590px;
   width: 100%;
-  height: 141px;
   display: flex;
   align-items: center;
-  padding: 10px 10px;
   margin-top: 25px;
   border-radius: 12px;
   gap: 15px;
-  margin: 15px 25px;
 }
 
 .court img {
   width: 207px;
   height: 121px;
+  padding: 10px 10px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-sizing: content-box;
 }
 
 .court-description {
@@ -263,6 +269,7 @@ main {
   justify-content: space-around;
   align-items: flex-end;
   gap: 25px;
+  padding-right: 10px;
 }
 
 footer {
@@ -279,6 +286,7 @@ footer {
   gap: 50px;
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
+  margin-top: 35px;
 }
 
 a {
@@ -301,7 +309,8 @@ a {
   position: absolute;
   top: 0;
   left: 100%;
-  width: 435px;
+  max-width: 435px;
+  width: 100%;
   height: 100%;
   background-color: #e76c1f;
   padding: 0;
@@ -309,3 +318,148 @@ a {
   z-index: 1;
 }
 /* ------------------------------------------------------------------ */
+
+.basket-mobile {
+  display: none;
+}
+
+@media (max-width: 980px) {
+  .basket_wrapper,
+  .basket,
+  .headlineBurger::after,
+  .headlinePizza::after,
+  .headlineSalads::after,
+  .menu {
+    display: none;
+  }
+
+  body {
+    padding-bottom: 78px;
+  }
+
+  header {
+    height: auto;
+  }
+  nav {
+    height: 79px;
+  }
+
+  nav img {
+    height: 31px;
+    width: auto;
+  }
+
+  .nav-bar {
+    padding: 0 15px;
+  }
+
+  .headline {
+    flex-direction: column-reverse;
+  }
+
+  header p {
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .hero {
+    gap: 5px;
+  }
+  .header-image {
+    margin: 0 25px;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-img {
+    top: -190px;
+    img {
+      width: 120px;
+    }
+  }
+  .header-image img {
+    height: 346px;
+    width: 95%;
+    border-radius: 30px;
+  }
+
+  .menu-container {
+    align-items: center;
+  }
+  .content {
+    width: 100%;
+  }
+
+  .head {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .head img {
+    width: 58px;
+    height: auto;
+    position: absolute;
+    top: -57px;
+  }
+
+  h2 {
+    padding: 0;
+  }
+
+  .headlineBurger {
+    padding: 0;
+    margin: 0;
+  }
+
+  .headlinePizza {
+    padding: 0;
+  }
+
+  .headlineSalads {
+    padding: 0;
+  }
+
+  .court {
+    max-width: 1240px;
+    min-width: 300px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .court img {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .court-description {
+    padding: 0 15px;
+  }
+
+  .price-section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 25px;
+    padding: 15px 15px;
+    box-sizing: border-box;
+  }
+
+  footer {
+    flex-direction: column-reverse;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+  }
+}
