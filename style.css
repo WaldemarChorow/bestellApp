@@ -17,6 +17,7 @@ body {
   box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.6);
   border: #ffffff;
   margin: 0;
+  overflow-x: clip;
 }
 
 header {
@@ -226,19 +227,22 @@ main {
   min-width: 590px;
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   margin-top: 25px;
   border-radius: 12px;
   gap: 15px;
+  padding: 15px;
+  box-sizing: border-box; 
 }
 
 .court img {
   width: 207px;
   height: 121px;
-  padding: 10px 10px;
+  min-width: 207px;
+  min-height: 121px; 
+  flex-shrink: 0;  
   object-fit: cover;
-  border-radius: 20px;
-  box-sizing: content-box;
+  border-radius: 12px;
 }
 
 .court-description {
@@ -248,7 +252,6 @@ main {
   justify-content: flex-start;
   align-items: flex-start;
   flex-grow: 1;
-  padding-top: 20px;
 }
 
 .court-descriptionAdded {
@@ -258,18 +261,15 @@ main {
   justify-content: flex-start;
   align-items: flex-start;
   flex-grow: 1;
-  padding-top: 20px;
   padding-left: 50px;
 }
 
 .price-section {
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-end;
   gap: 25px;
-  padding-right: 10px;
 }
 
 footer {
