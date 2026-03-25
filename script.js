@@ -1,27 +1,38 @@
 
 function render() {
-    let burgerContainer = document.getElementById('burger-menu');
-    burgerContainer.innerHTML = "";
-    for (let index = 0; index < menuBurger.length; index++) {
-        let singleBurger = menuBurger[index];
+    renderCategory('burger-menu', menuBurger);
+    renderCategory('pizza-menu', menuPizza);
+    renderCategory('salad-menu', menuSalad);
+}
+
+function renderCategory(containerId, menuArray) {
+    let container = document.getElementById(containerId);
+    container.innerHTML = "";
     
-        burgerContainer.innerHTML += getMenuTemplate(singleBurger);
+    for (let index = 0; index < menuArray.length; index++) {
+        let singleItem = menuArray[index];
+        container.innerHTML += getMenuTemplate(singleItem);
     }
+}
 
-    let pizzaContainer = document.getElementById('pizza-menu');
-    pizzaContainer.innerHTML = "";
-    for (let index = 0; index < menuPizza.length; index++) {
-        let singlePizza = menuPizza[index];
-
-        pizzaContainer.innerHTML += getMenuTemplate(singlePizza);       
-    }
+function renderCategory(containerId, menuArray) {
+    let container = document.getElementById(containerId);
+    container.innerHTML = "";
     
-    let saladContainer = document.getElementById('salad-menu');
-    saladContainer.innerHTML = "";
-    for (let index = 0; index < menuSalad.length; index++) {
-        let singleSalad = menuSalad[index];
-
-        saladContainer.innerHTML += getMenuTemplate(singleSalad);  
+    for (let index = 0; index < menuArray.length; index++) {
+        let item = menuArray[index];
+        let basketIndex = basketNames.indexOf(item.name);
+        let descriptionClass = 'court-description';
+        let buttonHTML = `<button class="addButton" onclick="addToBasket('${item.name}', ${item.price})">Add to basket</button>`;
+        
+        if (basketIndex !== -1) {
+            let amount = basketAmounts[basketIndex];
+            descriptionClass = 'court-descriptionAdded';
+            buttonHTML = `<button class="addedButton" onclick="addToBasket('${item.name}', ${item.price})">Added ${amount}</button>`;
+        }
+        
+        let formattedPrice = item.price.toFixed(2).replace('.', ',');
+        container.innerHTML += getMenuTemplate(item, descriptionClass, formattedPrice, buttonHTML);
     }
 }
 
@@ -30,7 +41,7 @@ function renderBasket() {
     let basketEmpty = document.getElementById('basket-empty');
     let basketSummary = document.getElementById('basket-summary');
 
-    basketItemsContainer.innerHTML = ''; 
+    basketItemsContainer.innerHTML = '';
 
     if (basketNames.length === 0) {
         basketEmpty.classList.remove('hidden');
@@ -42,11 +53,15 @@ function renderBasket() {
         basketSummary.classList.remove('hidden');
 
         for (let i = 0; i < basketNames.length; i++) {
-            basketItemsContainer.innerHTML += getBasketItemTemplate(i);
+            let name = basketNames[i];
+            let price = basketPrices[i];
+            let amount = basketAmounts[i];
+            let formattedTotalPrice = (price * amount).toFixed(2).replace('.', ',');
+
+            basketItemsContainer.innerHTML += getBasketItemTemplate(i, name, amount, formattedTotalPrice);
         }
     }
-
-    calculateTotals();     
+    calculateTotals();
 }
 
 function checkout() {

@@ -184,32 +184,32 @@
   }
 
   #btn-mobile-home {
-    background-image: url('/assets/icons/home.svg');
+    background-image: url('../assets/icon/home.svg');
   }
   #btn-mobile-profile {
-    background-image: url('/assets/icons/Profile.svg');
+    background-image: url('../assets/icon/Profile.svg');
   }
   #btn-mobile-orders {
-    background-image: url('/assets/icons/orders.svg');
+    background-image: url('../assets/icon/orders.svg');
   }
   #btn-mobile-basket {
-    background-image: url('/assets/icons/shopping.svg');
+    background-image: url('../assets/icon/shopping.svg');
   }
 
   #btn-mobile-home:hover, #btn-mobile-home:active {
-    background-image: url('/assets/icons/home-hover.svg');
+    background-image: url('../assets/icon/home-hover.svg');
   }
 
   #btn-mobile-profile:hover, #btn-mobile-profile:active {
-    background-image: url('/assets/icons/person.svg');
+    background-image: url('../assets/icon/person.svg');
   }
 
   #btn-mobile-orders:hover, #btn-mobile-orders:active {
-    background-image: url('/assets/icons/takeout_dining_2.svg');
+    background-image: url('../assets/icon/takeout_dining_2.svg');
   }
 
   #btn-mobile-basket:hover, #btn-mobile-basket:active {
-    background-image: url('/assets/icons/shopping_cart.svg');
+    background-image: url('../assets/icon/shopping_cart.svg');
   }
 
   .mobile-only {
